@@ -24,6 +24,7 @@ if not os.path.exists("ffmpeg"):
     subprocess.run(["apt-get", "install", "-y", "ffmpeg"])
 
 import streamlit as st
+OPENROUTER_API_KEY = "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"
 
 # Load API key from Streamlit secrets
 openrouter_api_key = st.secrets["OPENROUTER_API_KEY"]

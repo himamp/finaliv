@@ -1,6 +1,6 @@
 streamlit
 speechrecognition
-pyaudio  # Optional but useful for microphone access
+pydub
 requests
 pandas
-openpyxl  # Required for reading Excel files
+openpyxl  

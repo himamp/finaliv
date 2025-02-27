@@ -1,0 +1,7 @@
+streamlit
+speechrecognition
+pyaudio  # Optional but useful for microphone access
+requests
+pandas
+openpyxl  # Required for reading Excel files
+sqlite3

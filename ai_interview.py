@@ -23,6 +23,16 @@ if not os.path.exists("ffmpeg"):
     subprocess.run(["apt-get", "update"])
     subprocess.run(["apt-get", "install", "-y", "ffmpeg"])
 
+import streamlit as st
+
+# Load API key from Streamlit secrets
+openrouter_api_key = st.secrets["OPENROUTER_API_KEY"]
+
+if not openrouter_api_key:
+    st.error("⚠️ OpenRouter API Key is missing! Set it in secrets.toml or Streamlit Cloud settings.")
+    st.stop()
+
+
 # ✅ Step 1: Ensure all required packages are installed
 required_packages = ["speechrecognition", "pydub", "requests", "pandas", "openpyxl"]
 

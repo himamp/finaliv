@@ -6,9 +6,25 @@ import pandas as pd
 import speech_recognition as sr
 import requests
 import subprocess
+import os
+import subprocess
+
+# Install missing dependencies dynamically
+required_packages = ["speechrecognition", "pydub", "requests", "pandas", "openpyxl"]
+
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        subprocess.run(["pip", "install", package])
+
+# Download ffmpeg dynamically
+if not os.path.exists("ffmpeg"):
+    subprocess.run(["apt-get", "update"])
+    subprocess.run(["apt-get", "install", "-y", "ffmpeg"])
 
 # ✅ Step 1: Ensure all required packages are installed
-required_packages = ["speechrecognition", "pyaudio", "requests", "pandas", "openpyxl"]
+required_packages = ["speechrecognition", "pydub", "requests", "pandas", "openpyxl"]
 
 for package in required_packages:
     try:

@@ -3,4 +3,5 @@ speechrecognition
 pydub
 requests
 pandas
-openpyxl  
+openpyxl
+python-dotenv

@@ -28,14 +28,16 @@ OPENROUTER_API_KEY = "sk-or-v1-2e53c181cc97a3814070fed6223187cc0f191eaff6befd60d
 
 import streamlit as st
 
-# Load API key from Streamlit secrets
-openrouter_api_key = st.secrets["OPENROUTER_API_KEY"]
+import streamlit as st
+
+# ✅ Hardcode the OpenRouter API Key (Replace with your actual key)
+openrouter_api_key = "your_actual_api_key_here"  # 🔥 Replace with your real API key
 
 if not openrouter_api_key:
-    st.error("⚠️ OpenRouter API Key is missing! Set it in secrets.toml or Streamlit Cloud settings.")
+    st.error("⚠️ OpenRouter API Key is missing! Please set it manually.")
     st.stop()
-
-st.write("🔍 Available Secrets:", st.secrets)
+else:
+    st.success("✅ API Key Loaded Successfully!")  # Debugging message
 
 # ✅ Step 1: Ensure all required packages are installed
 required_packages = ["speechrecognition", "pydub", "requests", "pandas", "openpyxl"]

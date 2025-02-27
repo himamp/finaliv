@@ -35,6 +35,8 @@ if not openrouter_api_key:
     st.error("⚠️ OpenRouter API Key is missing! Set it in secrets.toml or Streamlit Cloud settings.")
     st.stop()
 
+st.write("🔍 Available Secrets:", st.secrets)
+
 # ✅ Step 1: Ensure all required packages are installed
 required_packages = ["speechrecognition", "pydub", "requests", "pandas", "openpyxl"]
 

@@ -30,14 +30,6 @@ import streamlit as st
 
 import streamlit as st
 
-# ✅ Hardcode the OpenRouter API Key (Replace with your actual key)
-openrouter_api_key = "your_actual_api_key_here"  # 🔥 Replace with your real API key
-
-if not openrouter_api_key:
-    st.error("⚠️ OpenRouter API Key is missing! Please set it manually.")
-    st.stop()
-else:
-    st.success("✅ API Key Loaded Successfully!")  # Debugging message
 
 # ✅ Step 1: Ensure all required packages are installed
 required_packages = ["speechrecognition", "pydub", "requests", "pandas", "openpyxl"]
